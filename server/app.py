@@ -71,3 +71,11 @@ def messages_by_id(id):
 
 if __name__ == "__main__":
     app.run(port=5555)
+
+function App() {
+  ...
+  useEffect(() => {
+    fetch("http://127.0.0.1:5555/messages")
+      .then((r) => r.json())
+      .then((messages) => setMessages(messages));
+  }, []);
